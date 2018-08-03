@@ -1,0 +1,6 @@
+syntax = "proto2";
+package message.pay;
+message WxQueryOrderRequest {
+    //https://pay.weixin.qq.com/wiki/doc/api/wxa/wxa_api.php?chapter=9_1&index=1   具体查看微信官方文档
+    required string order_number = 1; //商户系统内部订单号，要求32个字符内，只能是数字、大小写字母_-|*且在同一个商户号下唯一
+}

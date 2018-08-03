@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<phpunit
+        backupGlobals="true"
+        backupStaticAttributes="false"
+        cacheTokens="false"
+        bootstrap="./tests/bootstrap.php"
+        colors="false"
+        convertErrorsToExceptions="true"
+        convertNoticesToExceptions="true"
+        convertWarningsToExceptions="true"
+        forceCoversAnnotation="false"
+        mapTestClassNameToCoveredClassName="false"
+        printerClass="PHPUnit_TextUI_ResultPrinter"
+        processIsolation="true"
+        stopOnError="false"
+        stopOnFailure="false"
+        stopOnIncomplete="false"
+        stopOnSkipped="false"
+        stopOnRisky="false"
+        testSuiteLoaderClass="PHPUnit_Runner_StandardTestSuiteLoader"
+        timeoutForSmallTests="1"
+        timeoutForMediumTests="10"
+        timeoutForLargeTests="60"
+        verbose="false"
+>
+    <testsuites>
+        <testsuite name="core">
+            <directory suffix="Test.php" phpVersion="7.0.0" phpVersionOperator=">=">tests</directory>
+            <!--<exclude>tests/service/resources/merchant/v1</exclude>-->
+            <!--<file>tests/service/resources/merchant/v1/orderAgreeCancelTest.php</file>-->
+            <!--<file>tests/service/resources/merchant/v1/orderConfirmTest.php</file>-->
+            <!--<file>tests/service/resources/merchant/v1/orderDeclineTest.php</file>-->
+            <!--<file>tests/service/resources/merchant/v1/orderRejectCancelTest.php</file>-->
+        </testsuite>
+    </testsuites>
+    <filter>
+        <whitelist processUncoveredFilesFromWhitelist="false">
+            <directory suffix=".php">service</directory>
+            <directory suffix=".php">common/models</directory>
+            <exclude>
+                <directory suffix=".php">service/runtime</directory>
+                <directory suffix=".php">service/config</directory>
+                <directory suffix=".php">service/events </directory>
+                <file>service/resources/merchant/v1/wishlist.php</file>
+                <file>service/resources/merchant/v1/test.php</file>
+            </exclude>
+        </whitelist>
+    </filter>
+    <logging>
+        <log type="coverage-html" target="/Users/zgr0629/Documents/SVN/Lelai/report/merchant" lowUpperBound="35"
+             highLowerBound="70"/>
+        <log type="coverage-clover" target="/tmp/coverage.xml"/>
+        <log type="coverage-php" target="/tmp/coverage.serialized"/>
+        <log type="coverage-text" target="php://stdout" showUncoveredFiles="false"/>
+        <!--<log type="json" target="/tmp/logfile.json"/>-->
+        <!--<log type="tap" target="/tmp/logfile.tap"/>-->
+        <log type="junit" target="/tmp/logfile.xml" logIncompleteSkipped="false"/>
+        <log type="testdox-html" target="/tmp/testdox.html"/>
+        <log type="testdox-text" target="/tmp/testdox.txt"/>
+    </logging>
+</phpunit>

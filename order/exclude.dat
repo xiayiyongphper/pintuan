@@ -1,0 +1,10 @@
+.bowerrc
+.gitignore
+.idea
+*.log
+.svn
+/service/runtime/*
+/console/runtime/*
+*.svn/lock
+.svn/lock
+/framework

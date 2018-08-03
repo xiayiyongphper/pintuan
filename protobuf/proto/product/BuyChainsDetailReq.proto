@@ -1,0 +1,7 @@
+syntax = "proto2";
+package message.product;
+message BuyChainsDetailReq
+{
+	required int64 buy_chains_id = 1;//接龙活动id
+	required int64 user_id = 2;
+}

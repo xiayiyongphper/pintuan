@@ -1,0 +1,9 @@
+syntax = "proto2";
+import "proto/common/Coupon.proto";
+package message.order;
+message getPromotionCouponResponse {
+    repeated message.common.Coupon coupon_list = 1; //可使用优惠券列表
+    optional int64 type = 2; //1:待领取优惠券  2:待使用优惠券
+    optional string background_img = 3; //促销券列表背景图片
+    optional string background_color = 4; //促销券列表背景颜色
+}

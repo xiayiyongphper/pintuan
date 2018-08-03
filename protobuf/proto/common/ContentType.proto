@@ -1,0 +1,6 @@
+syntax = "proto2";
+package message.common;
+enum ContentType{
+    APPLICATION_PB_STREAM = 1;
+    APPLICATION_ZIP = 2;
+}

@@ -1,0 +1,8 @@
+syntax = "proto2";
+import "proto/order/orderDetailOriginal.proto";
+package message.order;
+message OrderDetailResponse
+{
+	optional message.order.orderDetailOriginal order_info = 1; // 订单信息
+}
+

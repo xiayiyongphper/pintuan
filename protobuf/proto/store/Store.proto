@@ -1,0 +1,41 @@
+syntax = "proto2";
+package message.store;
+message Store {
+    optional int64 store_id = 1; // 店铺id
+    optional string store_name = 2; // 店铺名称
+    optional int64 wallet = 3; // 钱包余额（分）
+    optional int64 province = 4; // 省份编码
+    optional int64 city = 5; // 城市编码
+    optional int64 district = 6; // 区/县编码
+    optional string address = 7; // 地址
+    optional string detail_address = 8; // 详细地址
+    optional int64 owner_user_id = 9; // 店主用户id
+    optional string lat = 10; // 超市纬度
+    optional string lng = 11; // 超市经度
+    optional string store_phone = 12; // 手机(此电话不一定和店主用户的电话一样，相互独立)
+    optional int64 status = 13; // 状态：0代表未审核，1代表审核通过，2代表审核不通过
+    optional string created_at = 14; // 创建时间
+    optional string updated_at = 15; // 更新时间
+    optional string apply_at = 16; // 审核通过时间
+    optional int64 type = 17; //超市类型：1-便利店，2-餐饮店，3-烟酒店，4-批零店
+    optional string business_license_no = 18; // 营业执照编号
+    optional string business_license_img = 19; // 营业执照照片
+    optional string store_front_img = 20; // 店铺正面照片
+    optional string open_time_range = 21; // 营业时间段
+    optional int64 contractor_id = 22; // 业务员id
+    optional int64 service_id = 23; // 客服id
+    optional int64 delivery_type = 24; //按位存储，从低位到高位：1-自提，2-送货到家。如：只有自提-1，可以自提和送货到家-3
+    optional string bank = 25; // 开户行
+    optional string account = 26; // 银行账号
+    optional string account_name = 27; // 开户名称
+    optional string commission_coefficient = 28; // 佣金系数
+    optional string mini_program_qrcode = 29; // 小程序二维码
+    optional string receive_goods_qrcode = 30; // 客户提货二维码
+    optional string wx_qrcode = 31; // 微信二维码
+    optional string owner_user_name = 32; // 店主姓名
+    optional string owner_user_photo = 33; // 店主照片
+    optional string bank_card_photo = 34; // 银行卡照片
+    optional string nick_name = 35; // 当前登录的店主微信昵称
+    optional string avatar_url = 36; // 当前登录的店主微信头像
+    optional string distance = 37; // 距离
+}

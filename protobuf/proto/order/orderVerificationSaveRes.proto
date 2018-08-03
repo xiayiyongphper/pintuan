@@ -1,0 +1,8 @@
+syntax = "proto2";
+import "proto/order/order.proto";
+import "proto/order/commissionRecord.proto";
+package message.order;
+message orderVerificationSaveRes {
+    required message.order.order order = 1; // 需要核销的订单信息
+    optional message.order.commissionRecord commission = 2; // 订单佣金信息
+}

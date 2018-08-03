@@ -1,0 +1,9 @@
+syntax = "proto2";
+package message.common;
+//分页
+message Pagination{
+     optional int64 total_count =1;//总数
+     optional int64 page =2;//当前页
+     optional int64 last_page =3;//最后页
+     optional int64 page_size =4;//页大小
+}

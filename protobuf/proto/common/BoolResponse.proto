@@ -1,0 +1,6 @@
+syntax = "proto2";
+package message.common;
+message BoolResponse
+{
+	required bool result = 1;//布尔型返回值，true或false
+}

@@ -1,0 +1,5 @@
+syntax = "proto2";
+package message.user;
+message UserListReq {
+    repeated int64 user_ids = 1;
+}

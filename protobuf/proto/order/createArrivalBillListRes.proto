@@ -1,0 +1,8 @@
+syntax = "proto2";
+import "proto/order/arrivalBillDetail.proto";
+import "proto/common/Pagination.proto";
+package message.order;
+message createArrivalBillListRes {
+    repeated message.order.arrivalBillDetail sku_arr = 1; // 商品信息
+    optional message.common.Pagination pagination = 2; // 分页
+}

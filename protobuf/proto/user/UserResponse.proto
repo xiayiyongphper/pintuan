@@ -1,0 +1,28 @@
+syntax = "proto2";
+import 'proto/user/UserStore.proto';
+package message.user;
+message UserResponse {
+    optional string auth_token = 1;
+    optional int64 is_auth = 2; //0表示未授权 1 已经授权
+    optional int64 user_id = 3;
+    optional string nick_name = 4;
+    optional int64 gender = 5;
+    optional string phone = 6;
+    optional string province = 7;
+    optional string city = 8;
+    optional string country = 9;
+    optional string avatar_url = 10;
+    optional int64 is_robot = 11;
+    optional int64 store_id = 12;
+    repeated message.user.UserStore user_store = 13;
+    optional int64 user_store_id = 14;
+    optional string real_name = 15;
+    optional string birthday = 16;
+    optional string constellation = 17;
+    optional string signature = 18;
+    optional string open_id = 19;
+    optional string own_store_id = 20;
+    optional string has_order = 21;
+    optional int64 store_count = 22;
+    optional int64 position = 23;
+}

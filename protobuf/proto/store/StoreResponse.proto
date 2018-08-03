@@ -1,0 +1,8 @@
+syntax = "proto2";
+import 'proto/store/Store.proto';
+import 'proto/common/Pagination.proto';
+package message.store;
+message StoreResponse {
+    repeated message.store.Store stores = 1;
+    optional message.common.Pagination pages = 2;
+}

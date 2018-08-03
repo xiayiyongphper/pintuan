@@ -1,0 +1,10 @@
+syntax = "proto2";
+import "proto/common/Order.proto";
+import "proto/common/Pagination.proto";
+package message.order;
+message OrderListResponse
+{
+	repeated message.common.Order order = 1; // 订单商品
+	required message.common.Pagination pages = 2;
+}
+

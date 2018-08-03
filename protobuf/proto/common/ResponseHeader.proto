@@ -1,0 +1,18 @@
+syntax = "proto2";
+package message.common;
+import 'proto/common/ContentType.proto';
+import 'proto/common/EncryptionMethod.proto';
+import 'proto/common/Protocol.proto';
+message ResponseHeader{
+    optional int64 code = 1 [default = 0];
+    optional string msg = 2;
+    optional string timestamp= 3;
+    optional string route = 4;
+    optional int64 request_id = 5;
+    optional message.common.ContentType content_type = 6[default=APPLICATION_PB_STREAM];
+    optional string checksum = 7;
+    optional string filename = 8;
+    required message.common.EncryptionMethod encrypt = 9[default=DES];
+    optional int64 encrypt_version = 10[default=1];
+    optional message.common.Protocol protocol = 11[default=PB];
+}

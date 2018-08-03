@@ -1,0 +1,12 @@
+syntax = "proto2";
+import "proto/common/Pagination.proto";
+package message.order;
+message arrivalOrderListReq {
+    required int64 store_id = 1; // 店铺的id
+    optional string search_all = 2; // 订单号 商品名称 客户姓名 手机号
+    optional string start_date = 3; // 下单开始时间
+    optional string end_date = 4; // 下单结束时间
+    optional int64 status = 5; // 订单状态：0-全部订单 4-未核销（已到货）（未核销），5-已核销(已确认收货)
+    optional message.common.Pagination pagination = 6; // 分页
+    required int64 arrival_id = 7; // 到货单id
+}

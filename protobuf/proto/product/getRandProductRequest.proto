@@ -1,0 +1,5 @@
+syntax = "proto2";
+package message.user;
+message getRandProductRequest {
+    optional int64 user_id = 1;
+}

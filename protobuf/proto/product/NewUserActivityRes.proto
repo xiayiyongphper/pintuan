@@ -1,0 +1,5 @@
+syntax = "proto2";
+package message.product;
+message NewUserActivityRes {
+    optional int64 activity_id = 1;
+}

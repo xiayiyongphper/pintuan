@@ -1,0 +1,8 @@
+syntax = "proto2";
+import "proto/order/arrivalBill.proto";
+import "proto/order/arrivalBillDetail.proto";
+package message.order;
+message arrivalBillDetailRes {
+    optional message.order.arrivalBill arrival_bill = 1; // 到货单详情
+    repeated message.order.arrivalBillDetail arrival_bill_detail = 2; // 到货单商品详情
+}

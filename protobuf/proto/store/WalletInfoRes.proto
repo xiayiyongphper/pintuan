@@ -1,0 +1,7 @@
+syntax = "proto2";
+package message.store;
+message WalletInfoRes {
+    optional string wallet = 1; // 钱包余额
+    optional string in_cash = 2; // 提现中
+    optional string total_cash = 3; // 累计提现
+}

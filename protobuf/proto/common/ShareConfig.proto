@@ -1,0 +1,8 @@
+syntax = "proto2";
+package message.common;
+message ShareConfig {
+    optional int64 id = 1;
+    optional int64 type = 2;
+    optional int64 position = 3;
+    optional string img_url = 4;
+}

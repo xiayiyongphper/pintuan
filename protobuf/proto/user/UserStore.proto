@@ -1,0 +1,14 @@
+syntax = "proto2";
+package message.user;
+message UserStore {
+    optional int64 user_store_id = 1;
+    optional string name = 2;
+    optional string phone = 3;
+    optional int64 store_id = 4;
+    optional int64 default_store = 5;
+    optional int64 has_order = 6;
+    optional int64 del = 7;
+    optional int64 user_id = 8;
+    optional int64 page = 9;
+    optional int64 page_size = 10;
+}

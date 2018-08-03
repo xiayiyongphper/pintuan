@@ -1,0 +1,9 @@
+syntax = "proto2";
+package message.common;
+message Banner {
+    optional int64 id = 1;
+    optional string title = 2;
+    optional string img_url = 3;
+    optional int64 type = 4;
+    optional string value = 5;
+}

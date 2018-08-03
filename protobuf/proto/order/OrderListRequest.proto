@@ -1,0 +1,10 @@
+syntax = "proto2";
+package message.order;
+message OrderListRequest
+{
+	required int64 user_id = 1;  //用户id
+	optional int64 list_type = 2;  //1:全部订单 2:待付款订单 3:代发货订单 4:待收货订单 5:已确认收货订单 6:待分享订单
+	optional int64 page = 3;
+	optional int64 page_size = 4;
+}
+

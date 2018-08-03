@@ -1,0 +1,24 @@
+syntax = "proto2";
+package message.product;
+message OrderReviewProductsRes
+{
+    repeated message.product.OrderReviewItem items = 1;//购买的商品列表
+    optional int64 include_new_user_product = 2; //是否包含新人专享商品
+}
+
+message OrderReviewItem
+{
+    required int64 product_id = 1;//商品id
+    required string name = 2;//商品名称
+    required string price = 3;//价格
+    optional string image = 4;//商品图片
+    required int64 specification_id = 5;//规格id
+    optional string specification_desc = 6;//规格信息
+    required int64 product_num = 7;//购买数量
+    optional int64 pintuan_id = 8;//拼团id
+    required int64 wholesaler_id = 9;//供应商id
+    repeated int64 pintuan_store_ids = 10;//拼团活动指定的自提点列表
+    optional int64 pintuan_activity_id = 11;//拼团活动id
+    optional string deal_price = 12;//成交价格
+    optional int64 buy_chains_id = 13;//接龙活动id
+}

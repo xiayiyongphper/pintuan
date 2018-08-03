@@ -1,0 +1,11 @@
+syntax = "proto2";
+import "proto/common/Pagination.proto";
+package message.order;
+message storeOrderListReq {
+    required int64 store_id = 1; // 店铺的id
+    optional string search_all = 2; // 订单号 商品名称 客户姓名 手机号
+    optional string start_date = 3; // 下单开始时间
+    optional string end_date = 4; // 下单结束时间
+    repeated int64 status = 5; // 订单状态 数组 [1,2,3]
+    optional message.common.Pagination pagination = 6; // 分页
+}

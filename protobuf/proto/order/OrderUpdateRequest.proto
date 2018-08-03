@@ -1,0 +1,8 @@
+syntax = "proto2";
+package message.order;
+//订单操作
+message OrderUpdateRequest
+{
+	required string order_number = 1;//订单编号
+	optional string prepay_id = 2;//预生成订单id
+}

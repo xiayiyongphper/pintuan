@@ -1,0 +1,7 @@
+syntax = "proto2";
+package message.product;
+// 二级分类列表请求
+message ThirdCategoryReq {
+    repeated int64 wholesaler_ids = 1; //供应商id
+    optional int64 second_category_id = 2;//二级分类id
+}

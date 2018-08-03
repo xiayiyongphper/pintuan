@@ -1,0 +1,6 @@
+syntax = "proto2";
+import "proto/product/BuyChainsDetailRes.proto";
+package message.product;
+message BuyChainsListRes {
+    repeated message.product.BuyChainsDetailRes buy_chains = 1;
+}

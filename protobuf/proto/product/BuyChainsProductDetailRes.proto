@@ -1,0 +1,16 @@
+syntax = "proto2";
+import "proto/product/buyChainsSKU.proto";
+import "proto/product/SpecificationItem.proto";
+package message.product;
+// 拼团列表请求
+message BuyChainsProductDetailRes {
+    required int64 buy_chains_id = 1; //接龙id
+    repeated string images = 2; // 商品图片
+    required string name = 3; // 商品名称
+    repeated string description = 4; // 商品详情，图片数组
+    required string end_time = 5; //活动结束时间
+    repeated message.product.buyChainsSKU specification = 6;//规格
+    repeated message.product.SpecificationItem specification_item = 7;//规格维度
+    required int64 product_id = 8; //商品id
+    required string sub_name = 9; // 商品副标题
+}

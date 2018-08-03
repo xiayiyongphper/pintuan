@@ -1,0 +1,24 @@
+syntax = "proto2";
+package message.common;
+message BuyItem
+{
+    required int64 product_id = 1;//商品id
+    required int64 specification_id = 2;//规格id
+    optional int64 pintuan_id = 3;//拼团id
+    required int64 product_num = 4;//购买数量
+    required string name = 5;
+    optional int64 wholesaler_id = 6;
+    optional string images = 7;
+    optional string description = 8;
+    optional int64 third_category_id = 9;
+    optional string item_detail = 10;
+    optional int64 purchase_price = 11;  //进货价
+    optional int64 pick_commission = 12;
+    optional int64 promote_commission = 13;
+    optional int64 deal_price = 14; //成交价
+    optional int64 pintuan_price = 15; //拼团价
+    optional int64 pintuan_activity_id = 16;//拼团活动id
+    optional int64 price = 17;  //原价
+    optional int64 new_user_price = 18; //新人价
+    optional int64 buy_chains_id = 19;//接龙活动id
+}

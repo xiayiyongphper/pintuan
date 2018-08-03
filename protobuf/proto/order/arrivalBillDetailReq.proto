@@ -1,0 +1,6 @@
+syntax = "proto2";
+package message.order;
+message arrivalBillDetailReq {
+    required int64 store_id = 1; // 店铺的id
+    required string arrival_id = 2; // 到货单id
+}

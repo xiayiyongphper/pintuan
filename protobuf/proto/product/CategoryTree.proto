@@ -1,0 +1,11 @@
+syntax = "proto2";
+package message.product;
+message CategoryTree
+{
+    required int64 id = 1;//分类id
+	required string name = 2;//分类名称
+	optional int64 parent_id = 3;//父分类id
+	optional int64 level = 4;//级别
+	optional string img = 5;//分类图片
+	optional message.product.CategoryTree child_nodes = 6;//子分类
+}

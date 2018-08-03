@@ -1,0 +1,10 @@
+syntax = "proto2";
+package message.product;
+message ProductBreif {
+    required int64 id = 1; //商品id
+    required string name = 2; //商品名称
+    optional string min_price = 3; //最低价格
+    optional string image = 4; //商品图片
+    optional int64 spec_id = 5; //商品规格id
+    optional string new_price = 6; //新人价
+}

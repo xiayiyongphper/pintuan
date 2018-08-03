@@ -1,0 +1,13 @@
+syntax = "proto2";
+package message.product;
+import "proto/common/KeyValueItem.proto";
+message Specification
+{
+    required int64 specification_id = 1;//规格id
+	required string price = 2;//价格
+	optional int64 pintuan_activity_id = 3;//拼团活动id
+	optional string pintuan_price = 4;//拼团价格
+	repeated message.common.KeyValueItem attribute = 5;//属性
+	optional string new_price = 6; //新人价
+	optional string image = 7;
+}

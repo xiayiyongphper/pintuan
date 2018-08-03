@@ -1,0 +1,21 @@
+syntax = "proto2";
+import "proto/common/OrderProduct.proto";
+package message.common;
+message Order {
+    optional int64 id = 1; //订单id
+    optional int64 status = 2; // 订单状态
+    optional string status_label = 3;  // 订单状态描述
+    optional string amount = 4; // 商品金额
+    optional string order_number = 5; // 订单编号
+    optional string create_at = 6; // 创建时间
+    repeated message.common.OrderProduct order_product = 7; // 订单商品
+    optional int64 order_product_num = 8; // 商品数量
+    optional int64 pintuan_activity_id = 9; // 拼团活动id
+    optional int64 type = 10; //订单类型：1-普通购买，2-参与拼团，3-发起拼团
+    optional string pick_code = 11; // 收货码
+    optional string store_name = 12; // 自提点
+    optional string payable_amount = 13; // 应付金额
+    optional string pintuan_full_time = 14; // 成团时间
+    optional int64 user_id = 15; //用户id
+    optional int64 pintuan_id = 16; //拼团id
+}

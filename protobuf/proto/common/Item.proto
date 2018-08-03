@@ -1,0 +1,12 @@
+syntax = "proto2";
+package message.common;
+
+message Item
+{
+    required int64 product_id = 1;//商品id
+	required int64 specification_id = 2;//规格id
+	optional int64 pintuan_id = 3;//拼团id
+	optional int64 pintuan_activity_id = 4;//拼团活动id
+	required int64 product_num = 5;//购买数量
+	optional int64 buy_chains_id = 6;//接龙活动id
+}

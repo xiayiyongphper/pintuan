@@ -1,0 +1,10 @@
+syntax = "proto2";
+package message.order;
+//订单操作
+message OrderAction
+{
+	optional int64 order_id = 1;//订单id
+	optional int64 user_id = 2;//用户id
+	optional string reason = 3;//原因
+	optional string order_number = 4;//用户编号
+}

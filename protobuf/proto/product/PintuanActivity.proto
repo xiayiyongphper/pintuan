@@ -1,0 +1,28 @@
+syntax = "proto2";
+package message.product;
+// 拼团列表请求
+message PintuanActivity {
+    optional int64 id = 1; //拼团id
+    optional string title = 2; //标题
+    optional string cover_picture = 3; //拼团活动封面图
+    optional int64 product_id = 4; // 商品id spu的id
+    optional int64 specification_id = 5; //规格id  sku的id
+    optional int64 wholesaler_id = 6; //供应商id
+    optional string pin_price = 7; //拼团价
+    optional string start_time = 8; //开始时间
+    optional string end_time = 9; //结束时间
+    optional int64 type = 10; //拼团类型：1-单点拼团，2-多点拼团
+    optional string strategy = 11; //人数策略，json格式，如："{"base_member_num":{"after_start_min":1,"member_num":9},"auto_increment":{"before_end_min":60,"increment_cycle_min":10},"fill_before_end":{"before_end_min":5}}"
+    optional int64 member_num = 12; //X人拼单（后台设置的多少人成团）
+    optional int64 continue_pintuan = 13; //超过可继续拼团 1是 2否
+    optional int64 sort = 14; //排序权重
+    optional string create_at = 15; //创建时间
+    optional string update_at = 16; // 更新时间
+    optional int64 del = 17 [default = 1]; //是否删除：1-正常，2-删除
+    optional int64 has_pintuan = 18; // X团正在拼
+    optional int64 complete_member_num = 19; //已拼的拼单人数
+    repeated string colonel = 20; //数组 二个团长的头像
+    optional int64 already_pin = 21; // 虚拟已拼商品数量
+    optional int64 store_id = 22;
+    optional string min_pin_price = 23; //最低拼团价
+}

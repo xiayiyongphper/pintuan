@@ -1,0 +1,11 @@
+syntax = "proto2";
+package message.order;
+//订单操作
+message OrderPayReq
+{
+	required string order_number = 1;//订单编号
+	required int64 pay_amount = 2;//微信返回的支付金额（分）
+	optional string bank_type = 3;  //银行代号
+	optional int64 settlement_total_fee = 4;  //应结订单金额
+	optional string transaction_id = 5;  //微信支付订单号
+}

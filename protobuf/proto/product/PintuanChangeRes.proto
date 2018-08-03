@@ -1,0 +1,7 @@
+syntax = "proto2";
+import "proto/product/Pintuan.proto";
+package message.product;
+// 开团
+message PintuanChangeRes {
+    required message.product.Pintuan pintuan = 1; //拼团详情
+}

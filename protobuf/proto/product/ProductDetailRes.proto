@@ -1,0 +1,16 @@
+syntax = "proto2";
+import "proto/product/Specification.proto";
+import "proto/product/SpecificationItem.proto";
+package message.product;
+message ProductDetailRes
+{
+    required int64 product_id = 1;//商品id
+	required string name = 2;//商品名称
+	optional string min_price = 3;//最低价格
+	repeated string images = 4;//商品图片
+	repeated string description = 5;//商品详情图片
+	repeated message.product.Specification specification = 6;//规格
+	repeated message.product.SpecificationItem specification_item = 7;//规格维度
+	optional int64 wholesaler_id = 8; //供应商id
+	optional string sub_name = 9; //副标题
+}

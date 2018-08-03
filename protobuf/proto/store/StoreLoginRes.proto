@@ -1,0 +1,15 @@
+syntax = "proto2";
+import "proto/store/Store.proto";
+package message.store;
+message StoreLoginRes {
+    optional string auth_token = 1;
+    optional int64 is_auth = 2; //0表示未授权 1 已经授权
+    optional int64 store_id = 3;
+    optional string nick_name = 4;
+    optional int64 gender = 5;
+    optional string country = 6;
+    optional string avatar_url = 7;
+    repeated message.store.Store store = 8;
+    optional string real_name = 9;
+    optional int64 is_merchant = 10;// 是否真正的商户 1是 2否 0无法判断
+}

@@ -1,0 +1,7 @@
+syntax = "proto2";
+import "proto/common/Pagination.proto";
+package message.order;
+message createArrivalBillListReq {
+    optional int64 store_id = 1; // 店铺的id
+    optional message.common.Pagination pagination = 2; // 分页
+}

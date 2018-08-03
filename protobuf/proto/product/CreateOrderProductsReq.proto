@@ -1,0 +1,12 @@
+syntax = "proto2";
+import "proto/common/Item.proto";
+package message.product;
+message CreateOrderProductsReq
+{
+	repeated message.common.Item items = 1;//购买的商品列表
+	repeated int64 wholesaler_ids = 2;//能配送到当前区域的供应商id
+	required int64 store_id = 3;
+	required int64 type = 4;//类型，1-普通购买，2-参与拼团，3-发起拼团
+	optional int64 activity_id = 5;
+	required int64 user_id = 6;
+}

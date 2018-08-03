@@ -1,0 +1,11 @@
+syntax = "proto2";
+package message.pay;
+message WxUnifiedOrderResponse {
+    required string appId = 1;  //微信分配的小程序ID
+    required string timeStamp = 2;  //时间戳从1970年1月1日00:00:00至今的秒数,即当前的时间
+    required string nonceStr = 3;  //随机字符串，不长于32位。推荐随机数生成算法
+    required string package = 4;  //统一下单接口返回的 prepay_id 参数值，提交格式如：prepay_id=wx2017033010242291fcfe0db70013231072
+    required string signType = 5;  //签名类型，默认为MD5，支持HMAC-SHA256和MD5。注意此处需与统一下单的签名类型一致
+    required string paySign = 6;  //签名
+    required string prepay_id = 7;  //预生成订单id
+}

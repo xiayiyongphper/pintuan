@@ -1,0 +1,8 @@
+syntax = "proto2";
+import "proto/order/arrivalBillDetail.proto";
+package message.order;
+message createArrivalBillSaveReq {
+    repeated message.order.arrivalBillDetail sku_arr = 1; // 商品数组信息
+    optional int64 store_id = 2; // 店铺的id
+    optional string remark = 3; // 备注
+}

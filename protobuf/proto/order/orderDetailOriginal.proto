@@ -1,0 +1,23 @@
+syntax = "proto2";
+import "proto/order/orderProduct.proto";
+package message.order;
+message orderDetailOriginal {
+    optional int64 id = 1; //订单id
+    optional int64 status = 2; // 状态：1-未支付，2-已支付，3-已发货，4-已到货，5-已确认收货，6-已取消  51 待分享
+    optional string real_amount = 3; // 实收金额（分）（信用卡支付等造成实收金额不等于订单金额）
+    optional string order_number = 4; // 系统生成订单号
+    optional string create_at = 5; // 下单时间
+    optional string enable_deliver_time = 6; //  拼团订单的成团时间，不是拼团则为已支付的时间
+    optional string pick_code = 7; // 提货码
+    optional string store_name = 8; // 店铺名称(自提点名称)
+    optional int64 type = 9; // 订单类型：1-普通购买，2-参与拼团,3-发起拼团
+    optional int64 pintuan_activity_id = 10; // 拼团活动id
+    optional string address_nick_name = 11; // 收货人用户昵称
+    optional string address_phone = 12; // 收货人用户手机号
+    optional string address = 13; // 收货人地址
+    optional int64 coupon_id = 14; // 优惠券表的id
+    optional string discount_amount = 15; // 优惠金额，分
+    repeated message.order.orderProduct order_product = 16; // 订单商品信息
+    optional int64 pintuan_id = 17; // 拼团表的id
+    optional string payable_amount = 18; //实付金额
+}

@@ -1,0 +1,9 @@
+syntax = "proto2";
+import "proto/product/ProductBreif.proto";
+import "proto/common/Pagination.proto";
+package message.product;
+message ProductListRes
+{
+    repeated message.product.ProductBreif product_list = 1;//商品列表
+    required message.common.Pagination pages = 2;
+}

@@ -1,0 +1,5 @@
+syntax = "proto2";
+package message.order;
+message orderAlreadyPinReq {
+    repeated int64 pintuan_id = 1; // 拼团的id
+}

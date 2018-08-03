@@ -1,0 +1,6 @@
+syntax = "proto2";
+package message.store;
+message Wholesaler {
+    optional int64 wholesaler_id = 1;
+    optional string wholesaler_name = 2;
+}

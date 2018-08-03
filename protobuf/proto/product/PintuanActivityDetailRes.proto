@@ -1,0 +1,7 @@
+syntax = "proto2";
+import 'proto/product/PintuanActivity.proto';
+package message.product;
+// 拼团列表请求
+message PintuanActivityDetailRes {
+    repeated message.product.PintuanActivity activity = 1; //拼团活动信息
+}

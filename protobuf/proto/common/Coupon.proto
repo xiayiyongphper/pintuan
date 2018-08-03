@@ -1,0 +1,19 @@
+syntax = "proto2";
+package message.common;
+message Coupon {
+    optional int64 id = 1; //优惠券ID
+    optional int64 user_id = 2; //用户ID
+    optional int64 state = 3; //优惠券状态  	1：未使用 2：已使用
+    optional int64 rule_id = 4; //规则ID
+    optional string expiration_date = 5; //过期时间
+    optional int64 source = 6; //来源
+    optional string created_at = 7; //领取时间
+    optional string title = 8; //优惠券标题
+    optional string discount_amount = 9; //优惠结果
+    optional string condition = 10; //使用条件
+    optional string unavailable_reason = 11; //不可使用原因
+    optional string coupon_tag = 12; //	新人券 促销券 分享券
+    optional string validity_time = 13; //有效期
+    optional int64 sales_rule_scope = 14; //1：全场通用 2：部分商品可用
+    optional int64 receive_out = 15; //１表示已抢光
+}

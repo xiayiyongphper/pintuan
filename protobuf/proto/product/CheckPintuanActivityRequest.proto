@@ -1,0 +1,6 @@
+syntax = "proto2";
+package message.product;
+// 开团
+message CheckPintuanActivityRequest {
+    required int64 pintuan_activity_id = 1; //拼团活动id
+}

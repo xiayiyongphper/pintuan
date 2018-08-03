@@ -1,0 +1,9 @@
+syntax = "proto2";
+package message.product;
+// 开团
+message PintuanStartReq {
+    required int64 pintuan_activity_id = 1; //拼团活动id
+    required int64 user_id = 2; // 用户的id
+    required string nick_name = 3; // 用户的昵称
+    required string avatar_url = 4; // 用户的头像
+}

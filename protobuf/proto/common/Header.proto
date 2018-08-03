@@ -1,0 +1,6 @@
+syntax = "proto2";
+package message.common;
+message Header
+{
+	required string route = 1;//路由命令
+}

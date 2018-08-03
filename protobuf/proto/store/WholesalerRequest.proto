@@ -1,0 +1,7 @@
+syntax = "proto2";
+package message.store;
+message WholesalerRequest
+{
+	repeated int64 wholesaler_id = 1;
+	repeated int64 store_id = 2;
+}

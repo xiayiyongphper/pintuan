@@ -1,0 +1,7 @@
+syntax = "proto2";
+package message.product;
+message SpecificationItem
+{
+	required string key = 1;//纬度名
+	repeated string value = 2;//纬度值选项
+}

@@ -1,0 +1,7 @@
+syntax = "proto2";
+package message.product;
+// 拼团列表请求
+message PintuanDetailReq {
+    required int64 pintuan_id = 1; //拼团id
+    required int64 user_id = 2; //用户的id
+}

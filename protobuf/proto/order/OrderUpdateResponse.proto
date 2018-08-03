@@ -1,0 +1,8 @@
+syntax = "proto2";
+package message.order;
+//订单操作
+message OrderUpdateResponse
+{
+    required string order_number = 1; //订单编号
+    required int64 user_id = 2;//用户id
+}

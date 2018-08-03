@@ -1,0 +1,11 @@
+syntax = "proto2";
+package message.pay;
+message WxQueryOrderResponse {
+    required string status = 1; //  回调状态
+    optional string order_number = 2;  // 回调的订单id
+    optional string msg = 3;  // 回调信息
+    optional int64 total_fee = 4;//支付金额
+    optional string bank_type = 5;  //银行代号
+    optional int64 settlement_total_fee = 6;  //应结订单金额
+    optional string transaction_id = 7;  //微信支付订单号
+}

@@ -1,0 +1,20 @@
+syntax = "proto2";
+package message.product;
+// 拼团列表请求
+message Pintuan {
+    optional int64 id = 1; //拼团id
+    optional int64 pintuan_activity_id = 2; //拼团活动id
+    optional int64 create_user_id = 3; //发起拼团的用户ID
+    optional string avatar_url = 4; //发起拼团的用户头像
+    optional string nick_name = 5; //发起拼团的用户昵称
+    optional int64 pintuan_info = 6; //还差X人拼成（成团人数-当前团已下单数量，如果大于0显示“还差X人拼成”，如果等于0显示“已成团，可继续拼”）
+    optional int64 member_num = 7; //已参加人数
+    optional int64 store_id = 8; //自提点id，拼团活动为单点拼团时才有
+    optional string create_at = 9; //创建时间
+    optional int64 status = 10; //是否有效团 1是 2否
+    optional int64 del = 11; //是否删除：1-正常，2-删除
+    optional string end_time = 12; //结束时间
+    optional int64 become_group_status = 13; //成团状态，1未成团，2已成团
+    optional string become_group_time = 14; //成团时间
+    optional int64 join_this_pintuan = 15; //用户是否加入了这个团
+}

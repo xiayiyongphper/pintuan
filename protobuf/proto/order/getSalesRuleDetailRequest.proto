@@ -1,0 +1,6 @@
+syntax = "proto2";
+package message.order;
+message getSalesRuleDetailRequest {
+    optional int64 user_id = 1;
+    optional int64 rule_id = 2;
+}

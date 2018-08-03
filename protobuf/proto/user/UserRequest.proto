@@ -1,0 +1,16 @@
+syntax = "proto2";
+package message.user;
+message UserRequest {
+    optional string code = 1;
+    optional int64 user_id = 2;
+    optional string auth_token = 3;
+    optional string raw_data = 4;
+    optional string signature = 5;
+    optional string encrypted_data = 6;
+    optional string iv = 7;
+    optional string province = 8;
+    optional string city = 9;
+    optional string country = 10;
+    optional string birthday = 11;
+    optional string constellation = 12;
+}

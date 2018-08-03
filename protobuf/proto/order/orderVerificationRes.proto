@@ -1,0 +1,8 @@
+syntax = "proto2";
+import "proto/order/order.proto";
+import "proto/order/orderProduct.proto";
+package message.order;
+message orderVerificationRes {
+    required message.order.order order = 1; // 需要核销的订单信息
+    repeated message.order.orderProduct order_product = 2; // 需要核销的订单商品信息
+}

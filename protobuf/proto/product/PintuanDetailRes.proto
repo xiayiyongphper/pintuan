@@ -1,0 +1,23 @@
+syntax = "proto2";
+import "proto/product/PintuanActivity.proto";
+import "proto/product/Pintuan.proto";
+import "proto/product/Specification.proto";
+import "proto/product/SpecificationItem.proto";
+package message.product;
+// 拼团列表请求
+message PintuanDetailRes {
+    optional message.product.PintuanActivity activity = 1; //拼团活动信息
+    repeated string product_picture = 2; // 商品图片
+    optional string product_name = 3; // 商品名称
+    optional string specification = 4; // 规格
+    optional string product_price = 5; // 商品单独售价
+    repeated string product_detail = 6; // 商品详情 图片数组
+    repeated message.product.Pintuan pintuan = 7; //拼团头像显示
+    repeated message.product.Pintuan else_pintuan = 8; //其他人的拼团列表
+    optional int64 pintuan_status = 9; //拼团状态 1-已参团-团已满 2-已参团-团未满 3-未参团-团已满 4-未参团-团未满
+    optional int64 pintuan_info = 10; // 还差X人拼团
+    required int64 time_status = 11;//时间状态：1-拼团和拼团活动都未结束，2-拼团已结束，3-拼团活动已结束
+    repeated message.product.Specification specifications = 12;//规格
+    repeated message.product.SpecificationItem specification_item = 13;//规格维度
+    required string pintuan_end_time = 14;//拼团结束时间
+}

@@ -1,0 +1,26 @@
+syntax = "proto2";
+package message.order;
+message orderProduct {
+    optional int64 id = 1; // 订单商品详情id
+    optional int64 order_id = 2; // 订单id
+    optional int64 product_id = 3; // 商品id
+    optional int64 pintuan_id = 4; //拼团id
+    optional int64 specification_id = 5; // 规格id
+    optional int64 number = 6; // 商品数量
+    optional string deal_price = 7; // 购买成交价格，（分）
+    optional string name = 8; // 商品名称
+    optional int64 wholesaler_id = 9; // 供应商id
+    repeated string images = 10; // 商品图片，图片可多张，json数组格式存储
+    optional string description = 11; // 商品描述，html格式
+    optional string unit = 12; // 单位
+    optional int64 third_category_id = 13; // 三级分类id
+    optional string item_detail = 14; // 规格属性详情 规格名称
+    optional int64 purchase_price = 15; // 进价
+    optional int64 pick_commission = 16; // 自提佣金
+    optional int64 promote_commission = 17; // 推广佣金
+    optional string price = 18; // 售价（原价）
+    optional string pintuan_price = 19; //拼团价格
+    optional string create_at = 20; // 创建时间
+    optional string update_at = 21; //更新时间
+    optional int64 del = 22; // 是否删除：1-正常，2-删除
+}

@@ -1,0 +1,10 @@
+syntax = "proto2";
+package message.pay;
+message WxUnifiedOrderRequest {
+    //https://pay.weixin.qq.com/wiki/doc/api/wxa/wxa_api.php?chapter=9_1&index=1   具体查看微信官方文档
+    required string body = 1; //商品描述  商品名称
+    optional string attach = 2; //附加数据，可以为空 一些备注之类
+    required string out_trade_no = 3; //商户系统内部订单号，要求32个字符内，只能是数字、大小写字母_-|*且在同一个商户号下唯一
+    required int64 total_fee = 4; //订单总金额，单位为分
+    required string openid = 5; //openid
+}

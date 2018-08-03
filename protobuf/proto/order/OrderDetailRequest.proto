@@ -1,0 +1,9 @@
+syntax = "proto2";
+package message.order;
+message OrderDetailRequest
+{
+	required int64 user_id = 1;  //用户id
+	optional string auth_token = 2;  //用户auth_token
+	required int64 order_id = 3;  //订单id
+}
+

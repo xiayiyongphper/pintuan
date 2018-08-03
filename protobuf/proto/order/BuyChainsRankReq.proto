@@ -1,0 +1,7 @@
+syntax = "proto2";
+package message.order;
+//订单操作
+message BuyChainsRankReq
+{
+	required string order_number = 1;//订单编号
+}

@@ -1,0 +1,23 @@
+syntax = "proto2";
+package message.store;
+message WalletRecord {
+    optional int64 store_id = 1; // 店铺的id
+    optional int64 id = 2; // 流水自增id
+    optional string record_number = 3; // 流水号
+    optional string amount = 4; // 变动金额（分，提现为负值）
+    optional int64 type = 5; // 类型：1-佣金转入，2-提现  3--后台导入奖金
+    optional int64 balance = 6; // 余额（分）
+    optional int64 status = 7; // 状态：0-无状态，佣金转入为0,1-待打款，2-已打款
+    optional string remit_at = 8; // 打款时间
+    optional string bonus_type = 9; // 后台导入的奖金类型 文字
+    optional string remark = 10; // 备注
+    optional int64 commission_id = 11; // 关联佣金表commission_record的id 当type为佣金转入时
+    optional string create_at = 12; // 创建时间
+    optional string update_at = 13; // 更新时间
+    optional int64 del = 14; // 是否删除：1-正常，2-删除
+    optional string money_remark = 15; // 打款备注
+    optional int64 after_balance = 16; // 后台导入后的钱包余额（变化后的钱包余额）
+    optional int64 user_id = 17; // 后台导入人的用户id
+    optional string import_remark = 18; // 后台导入备注
+    optional string import_ip = 19; // 后台导入时的所在IP地址
+}

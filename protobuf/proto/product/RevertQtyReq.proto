@@ -1,0 +1,12 @@
+syntax = "proto2";
+package message.product;
+message RevertQtyReq
+{
+	repeated message.product.RevertQtyItem items = 1;//购买的商品列表
+}
+
+message RevertQtyItem
+{
+    required int64 product_id = 1;//商品id
+	required int64 product_num = 5;//购买数量
+}

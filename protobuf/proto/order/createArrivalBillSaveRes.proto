@@ -1,0 +1,6 @@
+syntax = "proto2";
+package message.order;
+message createArrivalBillSaveRes {
+    required int64 id = 1; // 到货单id
+    required string arrival_code = 2; // 到货单单号
+}

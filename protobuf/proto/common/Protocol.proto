@@ -1,0 +1,6 @@
+syntax = "proto2";
+package message.common;
+ enum Protocol{
+     PB = 1;
+     JSON = 2;
+ }

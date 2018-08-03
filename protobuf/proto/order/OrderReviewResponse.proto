@@ -1,0 +1,11 @@
+syntax = "proto2";
+package message.order;
+import "proto/common/Coupon.proto";
+message OrderReviewResponse
+{
+    required string amount = 1;  //总价
+    optional string discount_amount = 2;  //优惠金额
+    repeated message.common.Coupon available_coupons = 3;  //可用优惠券列表
+    repeated message.common.Coupon unavailable_coupons = 4;  //不可用优惠券列表
+    optional string payment_amount = 5;  //实际支付金额
+}

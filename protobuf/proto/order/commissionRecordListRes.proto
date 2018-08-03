@@ -1,0 +1,8 @@
+syntax = "proto2";
+import "proto/common/Pagination.proto";
+import "proto/order/commissionRecord.proto";
+package message.order;
+message commissionRecordListRes {
+    repeated message.order.commissionRecord commission_info = 1; // 佣金商品数据
+    optional message.common.Pagination pagination = 2; // 分页
+}

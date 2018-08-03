@@ -1,0 +1,7 @@
+service/runtime/
+console/runtime/
+swoole.log
+.idea
+nohup.out
+framework
+protobuf

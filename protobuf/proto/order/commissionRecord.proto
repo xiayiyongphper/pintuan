@@ -1,0 +1,17 @@
+syntax = "proto2";
+import "proto/order/orderProduct.proto";
+package message.order;
+message commissionRecord {
+    optional int64 id = 1; // 自增id
+    optional int64 order_id = 2; // 订单id
+    optional int64 store_id = 3; // 店铺id
+    optional int64 type = 4; //类型：1-自提佣金，2-推广佣金
+    optional string commission_detail = 5; //佣金明细，包含每个商品条目的商品id、佣金值（分）、购买数量，例如："[{"product_id":2,"commission":23,"num":3},{"product_id":5,"commission":113,"num":2}]"
+    optional string amount = 6; //佣金金额
+    optional int64 status = 7; // 1-待获取，2-已获取，3-已转入钱包，4-已撤销
+    optional string create_at = 8; // 创建时间，对应订单支付时间
+    optional string effect_at = 9; // 生效时间，对应订单确认收货时间
+    optional string transfer_at = 10; // 转入钱包时间，系统自动转入
+    optional int64 del = 11; // 是否删除：1-正常，2-删除; // 转入钱包时间，系统自动转入
+    repeated message.order.orderProduct product_info = 12; // 佣金订单商品信息
+}

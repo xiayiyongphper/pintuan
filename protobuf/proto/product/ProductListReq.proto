@@ -1,0 +1,13 @@
+syntax = "proto2";
+package message.product;
+message ProductListReq
+{
+    repeated int64 wholesaler_ids = 1; //供应商id
+    optional int64 third_category_id = 2;//三级分类id
+    optional int64 page = 3;
+    optional int64 page_size = 4;
+    optional int64 topic_id = 5;
+    optional int64 activity_id = 6;
+    optional int64 rule_id = 7; //优惠规则id
+    repeated int64 product_ids = 8; //商品id
+}

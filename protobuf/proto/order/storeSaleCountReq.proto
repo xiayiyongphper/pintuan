@@ -1,0 +1,6 @@
+syntax = "proto2";
+package message.order;
+message storeSaleCountReq {
+    required int64 store_id = 1; // 店铺id
+    required int64 type = 2; // 统计类型 1-上周 2-本周 3-上月 4-本月 5-全部
+}

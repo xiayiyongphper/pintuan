@@ -1,0 +1,6 @@
+syntax = "proto2";
+import 'proto/store/Wholesaler.proto';
+package message.store;
+message WholesalerResponse {
+    repeated message.store.Wholesaler wholesalers = 1;
+}

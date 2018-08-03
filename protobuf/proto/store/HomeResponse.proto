@@ -1,0 +1,8 @@
+syntax = "proto2";
+import 'proto/common/Banner.proto';
+import 'proto/common/Topic.proto';
+package message.store;
+message HomeResponse {
+    repeated message.common.Banner banners = 1;
+    repeated message.common.Topic topics = 2;
+}

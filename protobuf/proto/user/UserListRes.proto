@@ -1,0 +1,8 @@
+syntax = "proto2";
+import 'proto/user/UserBreif.proto';
+import 'proto/common/Pagination.proto';
+package message.user;
+message UserListRes {
+    repeated message.user.UserBreif users = 1;
+    optional message.common.Pagination pages = 2;
+}

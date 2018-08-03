@@ -1,0 +1,6 @@
+syntax = "proto2";
+package message.order;
+message orderVerificationReq {
+    required int64 store_id = 1; // 自提点id
+    required string pick_code = 2; // 提货码
+}

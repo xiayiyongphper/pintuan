@@ -1,0 +1,10 @@
+syntax = "proto2";
+package message.product;
+message NewUserActivityReq {
+    optional int64 activity_id = 1;
+    optional int64 store_id = 2;
+    repeated int64 wholesaler_id = 3;
+    optional int64 city = 4;
+    optional int64 page = 5;
+    optional int64 page_size = 6;
+}

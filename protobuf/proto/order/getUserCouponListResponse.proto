@@ -1,0 +1,8 @@
+syntax = "proto2";
+import "proto/common/Coupon.proto";
+import "proto/common/Pagination.proto";
+package message.order;
+message getUserCouponListResponse {
+    repeated message.common.Coupon coupon_list = 1; //可使用优惠券列表
+    required message.common.Pagination pages = 2;
+}

@@ -1,0 +1,6 @@
+syntax = "proto2";
+import "proto/product/ProductBreif.proto";
+package message.user;
+message getRandProductResponse {
+    repeated message.product.ProductBreif product_list = 1; //商品列表
+}

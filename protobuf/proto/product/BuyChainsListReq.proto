@@ -1,0 +1,8 @@
+syntax = "proto2";
+package message.product;
+message BuyChainsListReq
+{
+    required int64 store_id = 1; //自提点id
+	required int64 user_id = 2;
+    repeated int64 wholesaler_id = 3; // 供应商id
+}

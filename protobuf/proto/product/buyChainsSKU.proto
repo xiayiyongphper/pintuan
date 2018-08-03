@@ -1,0 +1,14 @@
+syntax = "proto2";
+package message.product;
+import "proto/common/KeyValueItem.proto";
+message buyChainsSKU
+{
+    required int64 specification_id = 1;//规格id
+	required string price = 2;//原价
+	required string activity_price = 3;//接龙活动价
+	repeated message.common.KeyValueItem attribute = 4;//属性
+	required int64 sold_number = 5;//销量
+	required int64 qty = 6;//库存
+	optional int64 limit_buy_num = 7;//限购数量
+	optional int64 already_buy_num = 8;//用户已购数量
+}

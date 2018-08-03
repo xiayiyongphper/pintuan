@@ -1,0 +1,9 @@
+syntax = "proto2";
+package message.common;
+//图片
+message Image{
+    required string src = 1;//地址
+    optional string href = 2;//链接
+    optional int64 height = 3;//图片高度
+    optional string tag_param = 5; //内容标记参数
+}

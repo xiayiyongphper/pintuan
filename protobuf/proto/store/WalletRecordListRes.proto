@@ -1,0 +1,8 @@
+syntax = "proto2";
+import "proto/common/Pagination.proto";
+import "proto/store/WalletRecord.proto";
+package message.store;
+message WalletRecordListRes {
+    repeated message.store.WalletRecord wallet_info = 1; // 提现/奖励记录数据
+    optional message.common.Pagination pagination = 2; // 分页
+}

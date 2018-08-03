@@ -1,0 +1,19 @@
+syntax = "proto2";
+import "proto/product/Specification.proto";
+import "proto/product/SpecificationItem.proto";
+import "proto/product/PintuanActivity.proto";
+import "proto/product/Pintuan.proto";
+package message.product;
+// 拼团列表请求
+message PintuanProductDetailRes {
+    required message.product.PintuanActivity activity = 1; //拼团活动信息
+    repeated string product_picture = 2; // 商品图片 字符串 中间用;隔开
+    required string product_name = 3; // 商品名称
+    optional string specification = 4; // 规格描述
+    optional string product_price = 5; // 商品单独售价
+    repeated string product_detail = 6; // 商品详情 图片数组
+    repeated message.product.Pintuan pintuan = 7; //拼团信息
+    optional string min_price = 8; // 最低价（规格售价中的最低价）
+    repeated message.product.Specification specifications = 9;//规格
+    repeated message.product.SpecificationItem specification_item = 10;//规格维度
+}

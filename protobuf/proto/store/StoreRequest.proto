@@ -1,0 +1,9 @@
+syntax = "proto2";
+package message.store;
+message StoreRequest {
+    repeated int64 store_id = 1;
+    optional string lat = 2;
+    optional string lng = 3;
+    optional int64 page = 4;
+    optional int64 page_size = 5;
+}

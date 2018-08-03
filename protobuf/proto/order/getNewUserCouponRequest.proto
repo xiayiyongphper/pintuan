@@ -1,0 +1,5 @@
+syntax = "proto2";
+package message.order;
+message getNewUserCouponRequest {
+    optional int64 user_id = 1;
+}

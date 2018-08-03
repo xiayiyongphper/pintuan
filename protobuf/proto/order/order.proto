@@ -1,0 +1,36 @@
+syntax = "proto2";
+package message.order;
+message order {
+    optional int64 id = 1; //订单id
+    optional string order_number = 2; // 系统生成订单号
+    optional int64 user_id = 3; // 用户id
+    optional string amount = 4; // 订单金额（分）
+    optional string payable_amount = 5; // 应付金额（分），amount - discount_amount = payable_amount
+    optional string real_amount = 6; // 实收金额（分）（信用卡支付等造成实收金额不等于订单金额）
+    optional int64 coupon_id = 7; // 代金券id（如果使用了代金券）
+    optional int64 type = 8; // 订单类型：1-普通购买，2-参与拼团,3-发起拼团
+    optional int64 pintuan_activity_id = 9; // 拼团活动id
+    optional int64 store_id = 10; // 店铺id(自提点)
+    optional int64 pay_type = 11; // 支付方式：0-未知，1-微信支付
+    optional string create_at = 12; // 下单时间
+    optional string update_at = 13; // 更新时间
+    optional string cancel_at = 14; // 取消时间
+    optional int64 status = 15; // 状态：1-未支付，2-已支付，3-已发货，4-已到货，5-已确认收货，6-已取消
+    optional int64 refund_status = 16; // 退款状态：1-未退款，2-已退款
+    optional string refund_at = 17; // 退款时间
+    optional string pay_at = 18; // 付款时间
+    optional string cancel_reason = 19; // 取消原因
+    optional string receive_at = 20; // 确认收货时间
+    optional int64 receive_type = 21; // 确认收货方式：0-未收货，1-用户确认，2-系统自动确认
+    optional string arrival_at = 22; // 到货时间
+    optional string user_refund_reason = 23; // 用户申请退款原因
+    optional string service_refund_reason = 24; // 客服备注退款原因
+    optional int64 del = 25; // 是否删除 1否 2是
+    optional string pick_code = 26; // 提货码
+    optional string name = 27; // 收货人姓名
+    optional string phone = 28; // 收货人电话
+    optional float commission = 29; // 订单佣金
+    optional string store_name = 30; // 店铺id(自提点)
+    optional string product_name = 31; // 商品名称 = 商品名称+规格名称
+    optional int64 product_number = 32; // 商品数量
+}

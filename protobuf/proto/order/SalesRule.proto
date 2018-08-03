@@ -1,0 +1,6 @@
+syntax = "proto2";
+package message.order;
+message SalesRule {
+    optional int64 id = 1; //自增id
+    repeated int64 product_ids = 2; //自增id
+}

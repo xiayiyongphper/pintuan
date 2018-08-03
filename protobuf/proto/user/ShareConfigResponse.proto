@@ -1,0 +1,6 @@
+syntax = "proto2";
+import 'proto/common/ShareConfig.proto';
+package message.user;
+message ShareConfigResponse {
+    repeated message.common.ShareConfig share_configs = 1;
+}

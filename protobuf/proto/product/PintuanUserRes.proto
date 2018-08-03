@@ -1,0 +1,7 @@
+syntax = "proto2";
+import "proto/product/PintuanUser.proto";
+package message.product;
+// 开团
+message PintuanUserRes {
+    repeated message.product.PintuanUser pintuan_user = 1;//pintuan_user 相关信息
+}

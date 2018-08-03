@@ -1,0 +1,16 @@
+syntax = "proto2";
+import "proto/common/Pagination.proto";
+package message.product;
+message BuyChainsUsersRes
+{
+	repeated message.product.BuyChainsUser list = 1;//序号
+	required message.common.Pagination pagination = 2; // 分页
+}
+
+message BuyChainsUser
+{
+	required int64 serial_number = 1;//序号
+	required int64 user_id = 2;
+	required int64 buy_number = 3;
+	required string buy_time = 4;
+}

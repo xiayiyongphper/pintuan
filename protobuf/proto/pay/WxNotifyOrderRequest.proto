@@ -1,0 +1,5 @@
+syntax = "proto2";
+package message.pay;
+message WxNotifyOrderRequest {
+    required string data = 1;  //微信回调携带的数据
+}

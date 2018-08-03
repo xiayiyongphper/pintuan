@@ -1,0 +1,6 @@
+syntax = "proto2";
+import 'proto/user/UserBreif.proto';
+package message.user;
+message getRandUserResponse {
+    repeated message.user.UserBreif users = 1;
+}

@@ -1,0 +1,19 @@
+syntax = "proto2";
+package message.common;
+enum SourceEnum{
+    PCWEB = 1;
+    ANDROID_SHOP = 2;
+    IOS_SHOP = 3;
+    CORE = 4;
+    MERCHANT = 5;
+    CUSTOMER = 6;
+    ANDROID_CASH = 7;
+    SYNC = 8;
+    SYNC_PROCESS = 9;
+    IOS_DRIVER = 10;
+    ANDROID_CONTRACTOR = 11;
+    IOS_CONTRACTOR = 12;
+    CONTRACTOR = 13;
+	CRONTAB = 14;
+	MINIPROGRAM = 15;
+}

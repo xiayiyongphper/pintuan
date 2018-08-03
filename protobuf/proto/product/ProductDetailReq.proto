@@ -1,0 +1,7 @@
+syntax = "proto2";
+package message.product;
+message ProductDetailReq
+{
+	required int64 product_id = 1;//商品id
+	optional int64 activity_id = 2;
+}

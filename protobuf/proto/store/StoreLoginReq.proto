@@ -1,0 +1,11 @@
+syntax = "proto2";
+package message.store;
+message StoreLoginReq {
+    optional string code = 1;
+    optional int64 store_id = 2;
+    optional string auth_token = 3;
+    optional string raw_data = 4;
+    optional string signature = 5;
+    optional string encrypted_data = 6;
+    optional string iv = 7;
+}

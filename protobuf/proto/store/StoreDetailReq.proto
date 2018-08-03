@@ -1,0 +1,6 @@
+syntax = "proto2";
+package message.store;
+message StoreDetailReq {
+    required int64 store_id = 1;
+    optional string auth_token = 2;// 登录的token
+}

@@ -1,0 +1,8 @@
+syntax = "proto2";
+package message.product;
+// 拼团列表请求
+message PintuanActivityDetailReq {
+    repeated int64 activity_id = 1; //拼团活动id 一维数组[1,2,3]
+    optional int64 store_id = 2;
+    repeated int64 wholesaler_id = 3; // 供应商id 一维数组
+}

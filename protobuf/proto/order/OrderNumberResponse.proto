@@ -1,0 +1,11 @@
+syntax = "proto2";
+package message.order;
+message OrderNumberResponse
+{
+	optional int64 pending_pay = 1;//待付款
+	optional int64 pending_shipped = 2;//已经付款，待发货
+	optional int64 pending_received = 3;//已发货，待商家收货，待用户收货
+	optional int64 user_received = 4;//用户已经收货
+	optional int64 to_share = 5;//已经付款，待分享
+}
+

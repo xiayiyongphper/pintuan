@@ -1,0 +1,5 @@
+syntax = "proto2";
+package message.order;
+message GetPayOrderCountRes {
+    optional int64 order_count = 1;
+}

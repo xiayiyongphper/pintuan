@@ -1,0 +1,8 @@
+syntax = "proto2";
+import "proto/product/Category.proto";
+package message.product;
+// 分类列表响应
+message CategoryRes
+{
+    repeated message.product.Category category_list = 1; //分类
+}

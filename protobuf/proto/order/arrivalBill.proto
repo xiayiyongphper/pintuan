@@ -1,0 +1,13 @@
+syntax = "proto2";
+package message.order;
+message arrivalBill {
+    optional int64 id = 1; // 自增id
+    optional string arrival_code = 2; //到货单唯一编码
+    optional int64 sku_num = 3; //到货商品sku的种类
+    optional int64 arrival_total = 4; //到货总数量
+    optional int64 order_num = 5; //到货订单数量
+    optional string create_at = 6; //创建时间
+    optional int64 del = 7; //是否有效 1-有效 2-无效
+    optional string remark = 8; //备注
+    optional int64 should_arrival_total = 9; //应到数量
+}

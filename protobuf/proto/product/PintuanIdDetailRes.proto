@@ -1,0 +1,8 @@
+syntax = "proto2";
+package message.product;
+// 拼团列表请求
+message PintuanIdDetailRes {
+    optional int64 id = 1; //拼团id
+    optional string end_time = 2; //结束时间
+    optional int64 pintuan_need_num = 3; //成团人数-当前团已下单数量，如果大于0显示“还差X人拼成”，如果等于0显示“已成团，可继续拼”
+}

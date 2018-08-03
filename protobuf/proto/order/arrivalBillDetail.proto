@@ -1,0 +1,13 @@
+syntax = "proto2";
+package message.order;
+message arrivalBillDetail {
+    optional int64 id = 1; //自增id
+    optional int64 arrival_bill_id = 2; //关联的到货单(arrival_bill)id
+    optional int64 sku_id = 3; //到货商品sku的id
+    optional string sku_name = 4; //到货商品sku名称
+    optional int64 arrival_num = 5; //此sku到货数量
+    optional string order_arr = 6; //此sku已确认到货的订单id json格式
+    optional int64 order_num = 7; //此sku的到货订单数量
+    optional int64 should_arrival_num = 8; //此sku的应到货数量
+    repeated string images = 9; //此sku的商品图片
+}

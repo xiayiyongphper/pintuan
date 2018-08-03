@@ -1,0 +1,7 @@
+syntax = "proto2";
+package message.order;
+message OrderNumberRequest
+{
+	required int64 user_id = 1;  //用户id
+}
+

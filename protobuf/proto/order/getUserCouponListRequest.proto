@@ -1,0 +1,8 @@
+syntax = "proto2";
+package message.order;
+message getUserCouponListRequest {
+    optional int64 user_id = 1;
+    optional int64 list_type = 2; //1:可用  2:已使用 3:已失效
+    optional int64 page = 3;
+    optional int64 page_size = 4;
+}

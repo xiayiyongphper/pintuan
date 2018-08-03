@@ -1,0 +1,10 @@
+syntax = "proto2";
+package message.order;
+message storeSaleCountRes {
+    optional int64 order_count = 1; // 订单数
+    optional int64 product_count = 2; // 商品数
+    optional string amount_count = 3; // 销售额
+    optional string commission_count = 4; // 佣金数
+    optional string start_date = 5; // 开始时间
+    optional string end_date = 6; // 结束时间
+}

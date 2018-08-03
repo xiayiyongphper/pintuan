@@ -1,0 +1,11 @@
+syntax = "proto2";
+package message.common;
+message MarketconfigureRes {
+       optional int64 id = 1;
+       optional string custom_nickname = 2;
+       optional string custom_qrcode = 3;
+       optional string solitaire_success_msg = 4;
+       optional string invite_btn_msg = 5;
+       optional string invite_colonel_banner = 6;
+       optional string colonel_describe_img = 7;
+}

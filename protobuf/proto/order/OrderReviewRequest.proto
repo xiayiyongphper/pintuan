@@ -1,0 +1,17 @@
+syntax = "proto2";
+package message.order;
+message OrderReviewRequest
+{
+    required int64 user_id = 1;
+    repeated message.order.OrderReviewReqItem items = 2;
+    optional int64 coupon_id = 3;
+    optional int64 include_new_user_product = 4; //是否包含新人专享商品
+}
+
+message OrderReviewReqItem
+{
+    required int64 product_id = 1;//商品id
+    required int64 product_num = 2;//购买数量
+    optional int64 deal_price = 3; //成交价
+    optional int64 new_user_price = 4; //新人价
+}

@@ -1,0 +1,30 @@
+syntax = "proto2";
+package message.product;
+message CreateOrderProductsRes
+{
+    repeated message.product.CreateOrderItem items = 1;//购买的商品列表
+    optional int64 include_new_user_product = 2; //是否包含新人专享商品
+}
+
+message CreateOrderItem
+{
+    required int64 product_id = 1;//商品id
+    required string name = 2;//商品名称
+    required int64 price = 3;//价格(分)
+    required int64 wholesaler_id = 4;
+    optional string images = 5;//商品图片
+    optional string description = 6;//商品描述
+    required int64 third_category_id = 7;
+    optional string item_detail = 8;
+    required int64 purchase_price = 9;
+    required int64 pick_commission = 10;
+    optional int64 promote_commission = 11;
+    optional int64 pintuan_price = 12;//价格(分)
+    required int64 specification_id = 13;//规格id
+    optional int64 pintuan_id = 14;//拼团id
+    required int64 product_num = 15;//购买数量
+    optional int64 pintuan_activity_id = 16;//拼团活动id
+    required int64 deal_price = 17;//价格(分)
+    optional int64 new_user_price = 18;//价格(分)
+    optional int64 buy_chains_id = 19;//接龙活动id
+}

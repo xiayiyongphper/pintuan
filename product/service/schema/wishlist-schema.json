@@ -1,0 +1,37 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "type": {
+      "type": "integer"
+    },
+    "product_id": {
+      "type": "integer"
+    },
+    "wholesaler_id": {
+      "type": "integer"
+    },
+    "view_at": {
+      "type": "integer"
+    },
+    "purchase_at": {
+      "type": "integer"
+    },
+    "collect_at": {
+      "type": "integer"
+    },
+    "created_at": {
+      "type": "integer"
+    },
+    "updated_at": {
+      "type": "integer"
+    }
+  },
+  "required": [
+    "type",
+    "product_id",
+    "wholesaler_id",
+    "created_at",
+    "updated_at"
+  ]
+}

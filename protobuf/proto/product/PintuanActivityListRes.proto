@@ -1,0 +1,9 @@
+syntax = "proto2";
+import "proto/product/PintuanActivity.proto";
+import "proto/common/Pagination.proto";
+package message.product;
+// 拼团列表请求
+message PintuanActivityListRes {
+    repeated message.product.PintuanActivity activity = 1; //拼团活动信息
+    optional message.common.Pagination pages = 2;
+}
