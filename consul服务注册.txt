@@ -1,0 +1,1 @@
+consul agent -server -bootstrap-expect 3 -bind=172.16.10.182 -client=0.0.0.0 -data-dir=/home/xia/consul_local  -ui -node=172.16.10.182 -datacenter=dc2 -join=172.16.30.150 &
